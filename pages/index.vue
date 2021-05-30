@@ -1,14 +1,13 @@
 <template>
-
-  <!-- Content for Logged in users  -->
   <div>
-    <section class="section ">
+    <section class="section">
       <div class="content">
         <div class="container">
           <center>
             <div class="box">
               <p>
-                Create a Deep Link for your Youtube video.
+                Send users directly to the YouTube app to Increase Engagement &
+                Revenue.
               </p>
               <p>
                 Paste your link or click on the clipboard icon to get started.
@@ -19,9 +18,8 @@
       </div>
     </section>
 
-    <GenerateLink/>
+    <GenerateLink />
   </div>
-
 </template>
 
 
