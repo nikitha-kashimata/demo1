@@ -21,7 +21,6 @@
     "vue-chartjs": "^3.5.1"
   },
   "devDependencies": {
-    
     "node-sass": "^5.0.0",
     "sass-loader": "^10.1.1"
   }

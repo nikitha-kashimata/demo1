@@ -15,11 +15,8 @@
             </center>
       </div>
     
-    <h1 v-else>An error occurred</h1>
-    <center>
+    <h1 style="text-align:center" v-else>An error occurred</h1>
 
-     <b-button  @click="redirect()" size="is-large" type="is-danger">Home Page</b-button>
-    </center>
   </div>
       </div>
    </section>

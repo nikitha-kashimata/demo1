@@ -16,7 +16,6 @@
           </b-notification>
           <b-notification
             v-if="copiedText"
-            auto-close
             type="is-success"
             aria-close-label="Close notification"
             role="alert"
@@ -25,7 +24,6 @@
           </b-notification>
           <b-notification
             v-if="shared"
-            auto-close
             type="is-success is-light"
             aria-close-label="Close notification"
             role="alert"
@@ -51,21 +49,18 @@
               ></b-input>
             </b-field>
 
-            <b-field label="Custom Slug(optional)">
-              <b-input v-model="urlData.slug" size="is-medium"></b-input>
-            </b-field>
 
             <div class="column is-vcentered">
-              <b-button
+              <b-button id="button"
                 @click="shortenURL(urlData)"
                 type="is-primary is-light is-medium"
                 >Generate</b-button
               >
             </div>
           </div>
-
+        
           <!-- Form input END -->
-         
+        
         </section>
       </div>
     </div>
@@ -119,9 +114,8 @@ export default {
       try {
         this.isLoading = true;
 
-        let res = await this.$axios.post("url/shorten", urlData);
-
-        this.shorturl = res.data.shortUrl;
+        let res = await this.$axios.post("url/demo/shorten", urlData);
+        this.shorturl = res.data;
         const text = this.shorturl;
         this.urlData.slug="";
         this.urlData.longURL="";
@@ -131,6 +125,7 @@ export default {
           await navigator.clipboard.writeText(text);
           this.isLoading = false;
           this.copiedText = `Copied ${this.shorturl} to clipboard`;
+          
         } catch (err) {
           console.error("Failed to copy!", err);
         }
