@@ -7,6 +7,10 @@ export default {
     credentials: false,
     proxyHeaders: false
   },
+  target: 'static',
+  router: {
+    base: '/demo1/'
+  },
   
   // auth: {
     
